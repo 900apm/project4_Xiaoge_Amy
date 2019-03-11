@@ -283,7 +283,15 @@ footer {
 .categories {
   color: #ffda76;
   margin-top: 30vh;
-  padding-top: 25px; }
+  padding-top: 25px;
+  text-align: center; }
+  .categories p {
+    max-width: 80%;
+    margin: 10px auto; }
+  .categories button {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none; }
   .categories .change-category {
     color: white;
     background: #4d91bc;
@@ -336,7 +344,6 @@ footer {
     -webkit-transform: translate3d(5px, 0, 0);
     transform: translate3d(5px, 0, 0); } }
   .categories ul {
-    height: 50vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -351,6 +358,7 @@ footer {
     margin: 0; }
     @media screen and (max-width: 700px) {
       .categories ul {
+        height: 40vh;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -361,6 +369,7 @@ footer {
   .categories .category {
     display: inline-block;
     width: 30%;
+    height: 200px;
     margin: 0 1%;
     background: #dd6a66;
     border-radius: 5%;
@@ -372,7 +381,7 @@ footer {
         padding: 15px 0;
         border-radius: 10px; } }
   .categories .category-anchor {
-    display: block;
+    display: inline-block;
     height: 100%;
     width: 100%;
     display: -webkit-box;
@@ -411,6 +420,9 @@ footer {
   border-radius: 50px;
   padding: 2rem;
   margin-top: 40vh;
+  -webkit-transform: translateY(-15vh);
+  -ms-transform: translateY(-15vh);
+  transform: translateY(-15vh);
   /* question title */
   /* questions */
   /* question options to show answer and go to next question in the category */

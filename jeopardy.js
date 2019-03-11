@@ -114,7 +114,7 @@ app.newCategories = function(){
           $('.answer').removeClass('show');
           $('.answer').addClass('hide');
           if (app.catoffsetValue < 1000) {
-               app.catoffsetValue = app.catoffsetValue + 3;
+               app.catoffsetValue = app.catoffsetValue + Math.floor(Math.random() * 11);
           } else {
                app.catoffsetValue = 0;
           }
@@ -129,7 +129,7 @@ app.newCategories = function(){
 
 app.click = function(){
 
-     $('.category').on('click', function() {
+     $('.category').on('click', function() { 
 
           app.offsetValue = 0;
           // console.log($(this).find('p')[0].id);          
@@ -141,6 +141,10 @@ app.click = function(){
           $('.answer').addClass('hide');
           $('.next-question').removeClass('hide');
           $('.category-p').removeClass('hide');
+
+          // scroll to bottom/ question
+          let scrollingElement = (document.scrollingElement || document.body);
+          scrollingElement.scrollTop = scrollingElement.scrollHeight;
 
      })
 }
