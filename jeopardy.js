@@ -142,9 +142,7 @@ app.click = function(){
           $('.next-question').removeClass('hide');
           $('.category-p').removeClass('hide');
 
-          // scroll to bottom/ question
-          let scrollingElement = (document.scrollingElement || document.body);
-          scrollingElement.scrollTop = scrollingElement.scrollHeight;
+          document.getElementById('questions').scrollIntoView();
 
      })
 }
