@@ -1,0 +1,79 @@
+/* categories */
+.categories{
+  color: $accent3;
+  margin-top: 25vh;
+  padding-top: 25px;
+
+  .change-category{
+    color: white;
+    background: $accent2;
+    -webkit-text-stroke: 1px $accent3;
+    text-transform: uppercase;
+    border: 7px dotted $accent3;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    margin-top: 4%;
+    border-radius: 50px;
+    font-weight: bold;
+    &:hover{
+      animation: wiggle 1s;
+    }
+    @media screen and (max-width: 700px){
+    margin-top: 30px;
+    }
+  }
+
+  @keyframes wiggle {
+    10%, 90% {transform: translate3d(-5px, 0, 0);}
+    20%, 80% {transform: translate3d(5px, 0, 0);}
+    30%, 50%, 70% {transform: translate3d(-5px, 0, 0);}
+    40%, 60% {transform: translate3d(5px, 0, 0);}
+  }
+  
+  ul{
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    @media screen and (max-width: 700px){
+      flex-direction: column;
+      justify-content: space-around;
+      width: 100%;
+    }
+  }
+  
+  .category{
+    display: inline-block;
+    width: 30%;
+    margin: 0 1%;
+    background: $secondary;
+    border-radius: 5%;
+    border: 5px solid $accent3;
+    @media screen and (max-width: 700px){
+      width: 100%;
+      margin: 1% 0;
+      padding: 15px 0;
+      border-radius: 10px;
+    }
+
+  }
+
+  .category-anchor {
+    display: block;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+      text-align: center;
+    }
+    @media screen and (max-width: 700px){
+      width: 100%;
+    }
+  }
+}
