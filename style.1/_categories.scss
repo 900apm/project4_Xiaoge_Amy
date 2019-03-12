@@ -6,22 +6,24 @@
   text-align: center;
 
   p{
-    max-width: 80%;
+    max-width: 500px;
     margin: 10px auto;
+    @media screen and (max-width: 700px){
+      max-width: 80%;
+    }
   }
 
   .change-category{
-    color: white;
     background: $accent2;
     text-transform: uppercase;
-    border: 4px dotted $accent3;
-    display: flex;
-    justify-content: center;
+    display: inline-block;
     text-align: center;
     padding: 20px;
-    margin-top: 4%;
-    border-radius: 50px;
+    margin: 0 auto;
+    margin-top: 20px;
     font-weight: bold;
+    border: 5px dotted $accent;
+    border-radius: 25px;
     &:hover{
       animation: wiggle 1s;
     }
@@ -54,32 +56,35 @@
   .category{
     display: inline-block;
     width: 30%;
-    height: 200px;
     margin: 0 1%;
     @media screen and (max-width: 700px){
       width: 100%;
       margin: 1% 0;
       height: 100px;
     }
-
   }
 
   button {
     background: $secondary;
-    border: 5px solid $accent3;
     display: inline-block;
-    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100px;
+    background:
+    radial-gradient(circle at 0% 100%, transparent 15%, darken($accent2,10%) 15%) no-repeat, radial-gradient(circle at 100% 0%, transparent 15%, darken($accent2,10%) 15%) no-repeat, radial-gradient(circle at 0% 0%, transparent 15%, darken($accent2,10%) 15%) no-repeat, radial-gradient(circle at 100% 100%, transparent 15%, darken($accent2,10%) 15%) no-repeat;
+    background-position: 0% 100%, 100% 0%, 0% 0%, 100% 100%;
+    background-size: 75% 75%;
     p{
       color: $accent3;
       text-align: center;
       word-wrap: break-word
     }
     @media screen and (max-width: 700px){
-      width: 100%;
+      margin: 0 auto;
+      height: 100px;
+      width: 200px;
     }
   }
 }
