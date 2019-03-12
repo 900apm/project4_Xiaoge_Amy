@@ -14,14 +14,15 @@
   /* question title */
   .question-info{
     .category-p{
+      margin: 0;
       .question-category{
-        color: white;
-        font-size: 3rem;
+        color: $accent3;
+        font-size: 3.5rem;
         font-weight: bold;
         text-transform: uppercase;
         transition: font-size 1s;
         @media screen and (max-width: 700px){
-          font-size: 2rem;
+          font-size: 2.5rem;
         }
       }
     }
@@ -29,9 +30,16 @@
   
   /* questions */
   .question{
-    color:white;
+    color: $accent3;
     padding: 0 20px;
     font-weight: bold;
+    .points{
+      color: darken($accent3,5%);
+      display: inline-block;
+      background: $accent5;
+      border: 3px solid darken($accent5,10%);
+      padding: 2px;
+    }
   }
 
   /* question options to show answer and go to next question in the category */
@@ -39,6 +47,7 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     @media screen and (max-width: 700px){
       flex-direction: column;
       justify-content: space-between;
@@ -47,16 +56,36 @@
     /* show-answer button & next-question button */
     .show-answer,
     .next-question{
+      margin: 0 5px;
+      display: inline-block;
+      background: darken($accent2,5%);
       text-transform: uppercase;
       font-weight: bold;
       font-size: 2rem;
-      padding: 10px 0;
+      padding: 10px;
+      border-bottom: 7px solid darken($accent2,10%);
+      border-radius: 50px;
+      &:active{
+        transform: translateY(1px);
+        border: transparent;
+      }
+      @media screen and (max-width: 700px){
+        margin: 5px 0;
+        &:active{
+          transform: translateY(3px);
+          border-bottom: 7px solid transparent;
+        }
+      }
     }
   }
 
   /* place holder for questions */
   .pick-first{
-    margin: 30px 0 0px 0;
+    margin: 60px 0 0px 0;
     text-transform: uppercase;
+  }
+
+  .show{
+    color: $accent4;
   }
 }
